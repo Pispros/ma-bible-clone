@@ -99,10 +99,11 @@ const MainMenu = () =>
 					</Box>
 					<Box key="authUserMenuId" className='authUser'>
 						<Divider size="xl" />
-						<Box>
+						<Box mt="2">
 							<UserSelect/>
 						</Box>
 						<Divider size="xl" />
+						<Box mt="2" />
 						<div className='options'>
 							<Box borderRadius="2xl" display="flex" flexFlow="row nowrap" padding="2" width="70px" backgroundColor={"var(--item-background)"} fontSize="sm">
 								<Image
