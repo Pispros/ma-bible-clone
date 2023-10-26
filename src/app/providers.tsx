@@ -21,12 +21,15 @@ export function Providers({
             <ChakraProvider>
                 {
                     isForDesktop ? 
-                    <Grid templateColumns="15% 85%" height="100vh" width="100%">                
+                    <Grid templateColumns="20% 60% 20%" height="100vh" width="100%">                
                         <Box height="100vh" overflowY="auto" overflowX="hidden">
                             <MainMenu/>
                         </Box>
                         <Box height="100vh" overflowY="auto" overflowX="hidden">
                             {children}
+                        </Box>
+                        <Box height="100vh" overflowY="auto" overflowX="hidden" backgroundColor={'var(--relevant-background)'}>
+                            
                         </Box>
                     </Grid>
                     :

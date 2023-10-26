@@ -1,6 +1,6 @@
 import { createStore } from 'easy-peasy';
-import { todoStore } from './todo.store';
+import { noteStore } from './note.store';
 
 export const easyPeasyStore = createStore({
-    ...todoStore
+    ...noteStore
 });

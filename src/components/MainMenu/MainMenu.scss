@@ -1,4 +1,50 @@
-.MainMenuWrapper
-{
-	
+.MainMenuWrapper {
+    height: 100%;
+	display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+    @media (min-width: 990px) {
+        background-color: var(--relevant-background);
+        padding: 20px 10px;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+
+        .menu {
+            width: 100%;
+            padding: 0 10px;
+            .menuItem {
+                width: 100%;
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                cursor: pointer;
+            }
+    
+            .selected-menuItem {
+                background-color: var(--body-background);
+                border-radius: 10px;
+                img {
+                    background-color: rgb(0, 225, 0);
+                    border-radius: 7px;
+                    border: solid 3px var(--body-background);
+                }
+            }
+        }
+
+        .authUser {
+            width: 100%;
+            .options {
+                width: 100%;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-evenly;
+                align-items: center;
+                gap: 10px
+            }
+        }
+    }
 }
