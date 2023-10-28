@@ -109,7 +109,7 @@ const MainMenu = () =>
 								<Image
 									src={sun}
 									alt="Light mode"
-									style={{width: 15 }}
+									style={{width: 15, height: 15 }}
 								/>
 								<Text ml="1" fontSize="xs">
 									Clair

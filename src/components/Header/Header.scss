@@ -1,0 +1,14 @@
+.HeaderWrapper
+{
+    width: 100%;
+    background-color: var(--body-color) !important;
+	@media (max-width: 989px) {
+        position: fixed;
+        z-index: 5;
+    }
+    @media (min-width: 990px) {
+        .onlyMobile {
+            display: none;
+        }
+    }
+}

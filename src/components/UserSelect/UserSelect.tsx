@@ -1,4 +1,5 @@
 
+'use client';
 import { Box, Grid, Text } from '@chakra-ui/react'
 import { ChevronDownIcon } from '@chakra-ui/icons'
 import './UserSelect.scss'
