@@ -115,8 +115,8 @@ const MainMenu = () =>
 									Clair
 								</Text>
 							</Box>
-							<Text fontSize="xs">Donner</Text>
-							<Text fontSize="xs">A propos</Text>
+							<Text fontSize="xs" cursor="pointer">Donner</Text>
+							<Text fontSize="xs" cursor="pointer">A propos</Text>
 						</Box>
 					</Box>
 				</>

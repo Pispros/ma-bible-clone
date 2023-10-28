@@ -1,6 +1,6 @@
 'use client';
 
-import './Note.scss'
+import './NoteContent.scss'
 import { Box, Text, useMediaQuery, Input } from '@chakra-ui/react';
 import Header from '@/components/Header/Header';
 import Image from 'next/image';
