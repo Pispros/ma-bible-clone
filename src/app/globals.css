@@ -44,7 +44,10 @@
   /* Custums */
   --body-background: #FAFAFB;
   --relevant-background: #ECECEE;
-  --item-background: #b7b7b7;
+  --item-background: #dcdcdc;
+  --divider-desktop-color-background: #b4b4b4;
+  --text-second-color: #727280;
+  --danger-color: rgb(255, 73, 73);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -81,6 +84,9 @@
     /* Customs */
     --body-background: black;
     --relevant-background: rgb(56, 56, 56);
+    --item-background: #dcdcdc;
+    --text-second-color: #727280;
+    --danger-color: rgb(255, 73, 73);
   }
 }
 

@@ -63,19 +63,19 @@ const MainMenu = () =>
 							src={appLogo}
 							alt="App Logo"
 						/>
-						<Box mt="6"/>
+						<Box mt="4"/>
 						{
 							dektopMenuSettingsState?.map(item => (
 								<>
 									{
 										item.title.length > 0 ?
 										<>
-											<Box mt="6"/>
+											<Divider backgroundColor="var(--divider-desktop-color-background)" height="1px" />
+											<Box mt="4"/>
 											<Text fontSize="xl">
 												{ item.title }
 											</Text>
-											<Box mt="3"/>
-											<Divider size="xl" />
+											<Box mt="3"/>											
 										</>
 										:
 										<></>
@@ -97,14 +97,14 @@ const MainMenu = () =>
 							))
 						}
 					</Box>
-					<Box key="authUserMenuId" className='authUser'>
-						<Divider size="xl" />
-						<Box mt="2">
+					<Box key="authUserMenuId" className='authUser' mt="10vh" mb="3vh">
+						<Divider backgroundColor="var(--divider-desktop-color-background)" height="1px" />
+						<Box mt="3" mb="3">
 							<UserSelect/>
 						</Box>
-						<Divider size="xl" />
+						<Divider backgroundColor="var(--divider-desktop-color-background)" height="1px" />
 						<Box mt="2" />
-						<div className='options'>
+						<Box className='options'>
 							<Box borderRadius="2xl" display="flex" flexFlow="row nowrap" padding="2" width="70px" backgroundColor={"var(--item-background)"} fontSize="sm">
 								<Image
 									src={sun}
@@ -117,7 +117,7 @@ const MainMenu = () =>
 							</Box>
 							<Text fontSize="xs">Donner</Text>
 							<Text fontSize="xs">A propos</Text>
-						</div>
+						</Box>
 					</Box>
 				</>
 				:
