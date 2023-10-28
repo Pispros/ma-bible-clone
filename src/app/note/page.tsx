@@ -10,9 +10,11 @@ import Image from 'next/image';
 import { SearchIcon } from '@chakra-ui/icons';
 import { useStoreState } from 'easy-peasy';
 import { NoteInterface } from '@/interfaces/note.type';
+import { useRouter } from 'next/navigation';
 
 
 const notePage = () => {
+    const router = useRouter();
     const [isForDesktop] = useMediaQuery('(min-width: 990px)');
     const notes: Array<NoteInterface> = useStoreState((state: any) => state.notes);
 
@@ -40,6 +42,7 @@ const notePage = () => {
                 display="flex"
                 justifyContent="center"
                 alignItems="center"
+                onClick={() =>{ router.push('/note/new') }}
             >
                 <Image
                     src={add}
@@ -77,6 +80,7 @@ const notePage = () => {
                 justifyContent="center"
                 alignItems="center"
                 cursor="pointer"
+                onClick={() =>{ router.push('/note/new') }}
             >
                 <Image
                     src={add}
@@ -91,6 +95,7 @@ const notePage = () => {
                 title='Notes'
                 titleIcon={titleIcon}
                 icons={isForDesktop ? desktopTitleIcons : titleIcons}
+                showBorder={isForDesktop}
             />
             {
                 notes.length > 0 ?

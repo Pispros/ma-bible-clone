@@ -3,15 +3,19 @@
 import { Box } from '@chakra-ui/react';
 import './Header.scss';
 import { ChevronLeftIcon } from '@chakra-ui/icons'
+import { useRouter } from 'next/navigation';
 
 
-const Header = ({ title, titleIcon,  icons, showBack } : { 
+const Header = ({ title, titleIcon,  icons, showBack, showBorder, returnUrl } : { 
 	title?: string;  
 	titleIcon?: React.ReactNode;
 	icons?: React.ReactNode; 
-	showBack?: boolean
+	showBack?: boolean,
+	showBorder?: boolean,
+	returnUrl?: string
 })  => 
 {
+	const router = useRouter();
 	return(
 		<div className="HeaderWrapper">
 			<Box
@@ -21,6 +25,7 @@ const Header = ({ title, titleIcon,  icons, showBack } : {
 				alignItems="center"
 				padding="10px 20px 10px 10px"
 				width="100%"
+				borderBottom={showBorder ? "solid 1px var(--relevant-background)" : "unset"}
 			>
 				<Box
 					display="flex"
@@ -30,8 +35,9 @@ const Header = ({ title, titleIcon,  icons, showBack } : {
 					{
 						showBack === true &&
 						<Box
-						className='onlyMobile'
-						ml="3"
+							ml="3"
+							cursor="pointer"
+							onClick={() => {router.push(String(returnUrl))}}
 						>
 							<ChevronLeftIcon boxSize={8}/>
 						</Box>
@@ -43,7 +49,7 @@ const Header = ({ title, titleIcon,  icons, showBack } : {
 					</Box>
 					<Box
 						fontWeight="bold"
-						fontSize="2xl"
+						fontSize="xl"
 						ml="2"
 					>
 						{ title }
